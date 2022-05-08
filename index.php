@@ -2,7 +2,7 @@
 <html lang="en">
 
     <?php
-        include 'Components\header\header.php';
+        include 'View\Components\header\header.php';
     ?>
 
     <body>
@@ -26,18 +26,34 @@
                             </ul>
                         </li>
                     </ul>
+
+                    <?php if(isset($_SESSION['username'])) : ?>
+                        <a class="btn" href="profile.php">
+                            <div class="bi-person-fill fs-5"></div>
+                        </a>
+                    <?php endif ?>
+
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
+                        <button class="btn" type="submit">
+                            <i class="bi-cart-fill fs-5 me-1"></i>
+                            <!--
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            -->
                         </button>
                     </form>
 
-                    <form action="" method="post">
-                        <button class="btn btn-dark" type="submit">
-                            <span class=""><?php echo $showRightButton ?></span>
-                        </button>
-                    </form>
+                    <?php
+
+                        if (!isset($_SESSION['username'])){
+                            echo '
+                                <a class="btn btn-dark" href="login.php">
+                                    <span>Login</span>
+                                </a>';
+                        }
+
+                    ?>
+
+                    
                     
                 </div>
             </div>
@@ -257,12 +273,12 @@
         </section>
         
         <?php 
-            include 'Components/footer/footer.php';
+            include 'View/Components/footer/footer.php';
         ?>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="Controller/js/scripts.js"></script>
     </body>
 </html>
