@@ -28,7 +28,7 @@
                     </ul>
 
                     <?php if(isset($_SESSION['username'])) : ?>
-                        <a class="btn" href="profile.php">
+                        <a class="btn" href="Controller\gotToProfile.php">
                             <div class="bi-person-fill fs-5"></div>
                         </a>
                     <?php endif ?>
@@ -42,18 +42,11 @@
                         </button>
                     </form>
 
-                    <?php
-
-                        if (!isset($_SESSION['username'])){
-                            echo '
-                                <a class="btn btn-dark" href="login.php">
-                                    <span>Login</span>
-                                </a>';
-                        }
-
-                    ?>
-
-                    
+                    <?php if(!isset($_SESSION['username'])) : ?>
+                        <a class="btn btn-dark" href="login.php">
+                            <span>Login</span>
+                        </a>
+                    <?php endif ?>
                     
                 </div>
             </div>

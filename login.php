@@ -1,3 +1,7 @@
+<!--
+<?php include('Controller/authentication.php'); ?>
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +21,18 @@
                 <input name="email" type="email" placeholder="Email" required/>
                 <input name="password" type="password" placeholder="Passwort" required/>
                 <br/>
-                <button>Anmelden</button>
+                <button name="buttonLogin">Anmelden</button>
             </form>
+            <!--
             <?php include('View\Components\errors\errors.php'); ?>
+-->
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-right dark-overlay">
                     <h1>Guten Tag!</h1>
                     <p>Noch kein persönliches Konto eingerichtet? Worauf wartest du!</p>
-                    <button onclick="window.location.href='signup.php'" name="buttonLogin" class="ghost" id="signUp">Konto erstellen</button>
+                    <button onclick="window.location.href='signup.php'" class="ghost" id="signUp">Konto erstellen</button>
                 </div>
             </div>
         </div>

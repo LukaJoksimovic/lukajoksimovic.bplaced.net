@@ -9,7 +9,6 @@
     $name = "";
     $email = "";
     $password = "";
-    
     $errors = array();
 
     if(isset($_REQUEST['buttonCreateUser'])){

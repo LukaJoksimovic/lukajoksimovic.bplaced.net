@@ -11287,3 +11287,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/*  Own rules:  */
+
+.min {
+  min-height: 100vh;
+}
+

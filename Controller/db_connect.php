@@ -8,8 +8,6 @@
 
     $db_name = "shop";
 
-    $errors = array();
-
     $con = mysqli_connect($serverName, $username, $password, $db_name);
 
     if (mysqli_connect_errno()) {

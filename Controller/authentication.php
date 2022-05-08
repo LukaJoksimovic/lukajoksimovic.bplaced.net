@@ -14,15 +14,15 @@
         $_SESSION['email'] = $_REQUEST['email'];
         $_SESSION['password'] = $_REQUEST['password'];
 
-        $email = $_SESSION['email'];
-        $password = $_SESSION['password'];
-
-        if (empty($email)) {
+        if (empty($_SESSION['email'])) {
             array_push($errors, "Es muss eine E-Mail angegeben werden.");
         }
-        if (empty($password)) {
+        if (empty($_SESSION['password'])) {
             array_push($errors, "Es muss ein Passwort angegeben werden.");
         }
+
+        $email = $_SESSION['email'];
+        $password = $_SESSION['password'];
 
         // Prevent MySqli injetion
         $email = stripcslashes($email);
@@ -37,7 +37,7 @@
 
         if($count == 1){  
             
-            $getSurnameAndNameQuery = "SELECT vorname, nachname FROM benutzer WHERE email=$email"
+            $getSurnameAndNameQuery = "SELECT vorname, nachname FROM benutzer WHERE email='$email'";
             $runCommand = mysqli_query($con, $getSurnameAndNameQuery); 
             $fetcher = mysqli_fetch_array($runCommand, MYSQLI_ASSOC);
 

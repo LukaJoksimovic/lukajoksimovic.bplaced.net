@@ -1,3 +1,7 @@
+<!--
+<?php include('Controller/registerUser.php'); ?>
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,9 @@
                 <input type="password" placeholder="Passwort" name="password" required/>
                 <br/>
                 <button name="buttonCreateUser">Konto Erstellen</button>
-                <?php include('View\Components\errors\errors.php'); ?>
+                <!--
+                    <?php include('View\Components\errors\errors.php'); ?>
+                -->
             </form>
 
         </div>
