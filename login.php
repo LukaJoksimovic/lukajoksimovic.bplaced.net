@@ -1,7 +1,3 @@
-<!--
-<?php include('Controller/authentication.php'); ?>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +8,6 @@
     <link rel="stylesheet" href="View/css/login_signup.css">
 </head>
 <body>
-
     <div class="container">
         <div class="form-container sign-in-container">
             <form action="Controller\authentication.php" method="POST">
@@ -23,9 +18,7 @@
                 <br/>
                 <button name="buttonLogin">Anmelden</button>
             </form>
-            <!--
             <?php include('View\Components\errors\errors.php'); ?>
--->
         </div>
         <div class="overlay-container">
             <div class="overlay">
@@ -37,5 +30,6 @@
             </div>
         </div>
     </div>
+    <?php unset($_SESSION['errors']) ?>
 </body>
 </html>

@@ -37,13 +37,15 @@
 
         if($count == 1){  
             
-            $getSurnameAndNameQuery = "SELECT vorname, nachname FROM benutzer WHERE email='$email'";
-            $runCommand = mysqli_query($con, $getSurnameAndNameQuery); 
+            $getUserproperties = "SELECT id, vorname, nachname FROM benutzer WHERE email='$email'";
+            $runCommand = mysqli_query($con, $getUserproperties); 
             $fetcher = mysqli_fetch_array($runCommand, MYSQLI_ASSOC);
 
+            $id = $fetcher['id'];
             $surname = $fetcher['vorname'];
             $name = $fetcher['nachname'];
 
+            $_SESSION['id'] = $id;
             $_SESSION['surname'] = $surname;
             $_SESSION['name'] = $name;
 
@@ -51,6 +53,8 @@
         }  
         else{  
             array_push($errors, "Login failed. Invalid email or password.");
+            $_SESSION['errors'] = $errors;
+            header("Location: ..\login.php");
         }   
 
     }

@@ -1,137 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+ 
+    <?php
+        include 'View\Components\header\header.php';
+        include 'Controller/productActions.php';
+    ?>
 
-    <table>
-        <tr>
-            <th><a href="">Hauptseite</a></th>
-            <th></th>
-        </tr>
+    <body>
 
-        <tr>
-            <td></td>
-            <td><a href="">Über uns</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Geschäftsleitung</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Werden Sie Partner</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Rückgaberichtlinien</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Geschäftsleitung</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Allgemeine Geschäftsbedingungen (AGB)</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Impressum</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Geschäftsleitung</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Spenden Sie jetzt</a></td>
-        </tr>
+        <?php include 'View\Components\navigation\nav.php'; ?>
+        
+        <div class="min">
+
+        <section class="py-5">
+            <div class="container center">
+
+                <table>
 
 
-        <tr>
-            <td></td>
-            <td><a href="">Produkte</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Kategorie</a></td>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Produktdetails</a></td>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Produkte vergleichen</a></td>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td><a href="">Account</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Zahlungsarten</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Passwort ändern</a></t>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Gespeicherte Addressen</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Bestellungen</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Geschenkkarten</a></td>
-        </tr>
+                    <tr>
+                        <td></td>
+                        <td><li><a href="index.php">Hauptseite</a></li></td>
+                    </tr>
 
 
+                    <tr>
+                        <td></td>
+                        <td><li><a href="contact.php">Kontakt</a></li></td>
+                    </tr>
 
-        <tr>
-            <td></td>
-            <td><a href="">Einkaufswagen</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Zusammenfassung Bestellung</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Zahlungsart</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="">Versandart</a></td>
-        </tr>
 
-    </table>
-</body>
+                    <tr>
+                        <td></td>
+                        <td><li><a href="products.php">Produkte</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="category.php?kategorieid=1">Kategorie Technik</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="category.php?kategorieid=2">Kategorie Fahrzeuge</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="category.php?kategorieid=3">Kategorie Möbel</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="category.php?kategorieid=4">Kategorie Bekleidung</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="productinfo.php?produktid=1">Produktdetails</a></li></td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td><li><a href="">Account</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="">Meine Informationen</a></li></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><li><a href="">Meine Bestellungen</a></li></td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td><li><a href="">Einkaufswagen</a></li></td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </section>
+
+        </div>
+    
+
+        <?php 
+            include 'View/Components/footer/footer.php';
+        ?>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="Controller/js/scripts.js"></script>
+    </body>
 </html>

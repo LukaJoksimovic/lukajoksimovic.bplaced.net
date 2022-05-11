@@ -21,18 +21,34 @@ insert into produktkategorie (id, kategoriename) values
     (3,'Möbel'),
     (4,'Bekleidung');
 
-insert into produkt (id,produktname,beschreibung,preis,produktkategorie_fs) values
-    (1,'3070 ti','Die 3070 ti ist eine Grafikkarte für den Alltäglichen Gebrauch. Sei es Office-Arbeiten oder Gamen',1050.00,1),
-    (2,'Intel Prozessor','Test Text für Prozessor',600.00,1),
-    (3,'Audi RS3','Eine 5 Cylinder Maschine für ein tolles Erlebnis',59000.00,2),
-    (4,'BMW M4','Eine 6 Cylinder Maschine für ein tolles Erlebnis',89000.00,2),
-    (5,'Tisch','Ein Tisch mit grosser Fläche',550.00,3),
-    (6,'Sofa','Ein Sofa mit so viel Platz für die Ganze Famillie',799.50,3),
-    (7,'Nike T-Shirt Grau','Nike T-Shirt, für Sport und Eleganz',40.00,4),
-    (8,'Nike Trainerhosen','Nike Trainerhosen, für Sport und Eleganz',70.90,4);
+insert into produkt (id,produktname,beschreibung,preis,produktkategorie_fs,imagePath) values
+    (1,'3070 ti','Die 3070 ti ist eine Grafikkarte für den Alltäglichen Gebrauch. Sei es Office-Arbeiten oder Gamen',1050.00,1,"View/content/assets/img/3070ti.jpg"),
+    (2,'Intel Prozessor','Test Text für Prozessor',600.00,1,"View/content/assets/img/Intel.png"),
+    (3,'Audi RS3','Eine 5 Cylinder Maschine für ein tolles Fahrerlebnis',69000.00,2,"View/content/assets/img/audirs3.jpg"),
+    (4,'BMW M4','Eine 6 Cylinder Maschine für ein tolles Fahrerlebnis',99000.00,2,"View/content/assets/img/bmwM4.jpg"),
+    (5,'Tisch','Ein Tisch mit genügend Fläche',50.00,3,"View/content/assets/img/table.jpg"),
+    (6,'Sofa','Ein Sofa mit so viel Platz für die Ganze Famillie',799.50,3,"View/content/assets/img/sofa.jpg"),
+    (7,'Nike T-Shirt Grau','Nike T-Shirt, für Sport und Eleganz',40.00,4,"View/content/assets/img/tshirtGrau.jpg"),
+    (8,'Trainerhosen','Trainerhosen, für Sport und Eleganz',350.90,4,"View/content/assets/img/trainerhosenGrau.jpg");
 
 insert into bestellung (id,datum,adresse,postleitzahl_fs,benutzer_fs) values
     ();
 
 insert into bestellung_details (id,bestellung_fs,produkt_fs,preis,anzahl) values
     ();
+
+insert into warenkorb (id, benutzer_fs) values
+    (1,1),
+    (2,2),
+    (3,3),
+    (4,4),
+    (5,5),
+    (6,6),
+    (7,7),
+    (8,8),
+    (9,9);
+
+insert into warenkorb_produkt (id, produkt_fs, warenkorb_fs, anzahl) values
+    (1, 1, 1, 2)
+    (2, 2, 1, 3);
+

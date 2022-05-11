@@ -35,8 +35,9 @@ CREATE TABLE produkt (
     id INT NOT NULL AUTO_INCREMENT UNIQUE,
     produktname VARCHAR(255) NOT NULL,
     beschreibung VARCHAR(255) NOT NULL,
-    preis DECIMAL(5,2) NOT NULL,
+    preis DECIMAL(10,2) NOT NULL,
     produktkategorie_fs INT NOT NULL,
+    imagePath VARCHAR(255) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (produktkategorie_fs) REFERENCES produktkategorie(id) ON DELETE CASCADE
 );
@@ -45,10 +46,8 @@ CREATE TABLE bestellung (
     id INT NOT NULL AUTO_INCREMENT UNIQUE,
     datum DATETIME NOT NULL DEFAULT NOW(),
     adresse VARCHAR(255) NOT NULL,
-    postleitzahl_fs INT NOT NULL,
     benutzer_fs INT NOT NULL,
     PRIMARY KEY(id),
-    FOREIGN KEY (postleitzahl_fs) REFERENCES ort(postleitzahl) ON DELETE CASCADE,
     FOREIGN KEY (benutzer_fs) REFERENCES benutzer(id) ON DELETE CASCADE
 );
 
@@ -61,4 +60,21 @@ CREATE TABLE bestellung_details (
     PRIMARY KEY(id),
     FOREIGN KEY (bestellung_fs) REFERENCES bestellung(id) ON DELETE CASCADE,
     FOREIGN KEY (produkt_fs) REFERENCES produkt(id) ON DELETE CASCADE
+);
+
+CREATE TABLE warenkorb (
+    id INT NOT NULL AUTO_INCREMENT UNIQUE,
+    benutzer_fs INT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(benutzer_fs) REFERENCES benutzer(id) ON DELETE CASCADE
+);
+
+CREATE TABLE warenkorb_produkt (
+    id INT NOT NULL AUTO_INCREMENT UNIQUE,
+    produkt_fs INT NOT NULL,
+    warenkorb_fs INT NOT NULL,
+    anzahl INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY(produkt_fs) REFERENCES produkt(id) ON DELETE CASCADE,
+    FOREIGN KEY(warenkorb_fs) REFERENCES warenkorb(id) ON DELETE CASCADE
 );

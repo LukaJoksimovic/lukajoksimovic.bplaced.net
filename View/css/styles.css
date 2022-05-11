@@ -11290,7 +11290,256 @@ textarea.form-control-lg {
 
 /*  Own rules:  */
 
+.backgroundImageHome {
+  background: radial-gradient(rgba(0, 0, 0, 0.7) ,  rgba(0, 0, 0, 0.6)), url('../content/img/background2.jpg');
+  background-size: cover;
+  background-position: top;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 15rem
+}
+
+.centerText {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searcher {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.searcher > form {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+
 .min {
   min-height: 100vh;
 }
+
+.minCart {
+  min-height: 90vh;
+}
+
+.fitCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dedede;
+}
+
+.fitCard > a >img {
+  width: auto;
+  max-height: 150px;
+  max-width:100%;
+}
+
+
+/* Warenkorb */
+
+.panel {
+  background-color: #ededed;
+  display: grid;
+  grid-template-areas: 'produkte produkte gesamtBetrag'
+                        'produkte produkte gesamtBetrag'
+                       'lieferung lieferung gesamtBetrag'
+                       'akzeptieren akzeptieren gesamtBetrag';
+
+
+  border-radius: 0.5rem;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.panel > * {
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.produkte {
+  grid-area: produkte;
+  min-width: 75vh;
+}
+
+.produkte > * {
+  margin: 20px;
+}
+
+.gesamtbetrag {
+  grid-area: gesamtBetrag;
+  max-height: 35vh;
+  min-width: 20vh;
+}
+
+.gesamtbetrag > * {
+  margin: 20px;
+}
+
+.lieferung {
+  grid-area: lieferung;
+  height: 15vh;
+}
+
+.lieferung > * {
+  margin: 20px;
+}
+
+.akzeptieren {
+  grid-area: akzeptieren;
+  height: 15vh;
+}
+
+.akzeptieren > * {
+  margin: 20px;
+}
+
+.verticalCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 0.5rem;
+  background: linear-gradient(0.25turn, #ededed, white, #fcfcfc);
+}
+
+.fitImage > img {
+  width: auto;
+  max-height: 100px;
+}
+
+.flexer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.costumButton {
+  width: 100%;
+}
+
+.imgageWrapper{
+  width: 10%;
+}
+
+.imageWrapper > img{
+  width: 250px;
+}
+
+@media (max-width: 500px) {
+
+  .panel {
+    background-color: #ededed;
+    display: grid;
+    grid-template-areas: 'produkte'
+                          'lieferung'
+                         'akzeptieren'
+                         'gesamtBetrag';
+  
+    border-radius: 0.5rem;
+    grid-gap: 12px;
+    padding: 12px;
+  }
+
+  .produkte {
+    grid-area: produkte;
+    min-width: 100%;
+  }
+
+  .gesamtbetrag {
+    grid-area: gesamtBetrag;
+    max-height: auto;
+    min-width: auto;
+  }
+
+  .lieferung {
+    grid-area: lieferung;
+    height: 15vh;
+  }
+
+  .akzeptieren {
+    grid-area: akzeptieren;
+    height: 15vh;
+  }
+
+  .verticalCard {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 0.5rem;
+    background: linear-gradient(0.25turn, #ededed, white, #fcfcfc);
+  }
+
+}
+
+.costumButton2 {
+  margin: 0 auto;
+  width: auto;
+  padding-bottom: 20px;
+}
+
+.marger {
+  margin-bottom: 3rem;
+}
+
+.centerAndBigger {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.centerAndBigger > * {
+  color: inherit;
+}
+
+#borderColor1 {
+  border: 1px solid var(--bs-blue);
+}
+
+#borderColor2 {
+  border: 1px solid var(--bs-red);
+}
+
+#borderColor3 {
+  border: 1px solid var(--bs-yellow);
+}
+
+#borderColor4 {
+  border: 1px solid var(--bs-green);
+}
+
+.color1 {
+  color: var(--bs-blue);
+}
+
+.color2 {
+  color: var(--bs-red);
+}
+
+.color3 {
+  color: var(--bs-yellow);
+}
+
+.color4 {
+  color: var(--bs-green);
+}
+
+.center > *{
+  margin: 0 auto;
+}
+
 

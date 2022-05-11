@@ -46,15 +46,24 @@
         if (count($errors) === 0){
 
             $createUserQuery = "INSERT INTO benutzer (vorname, nachname, email, passwort) VALUES('$surname','$name','$email','$password')";
-
             mysqli_query($con, $createUserQuery);
 
+            $getUserID = "SELECT id FROM benutzer WHERE email='$email' LIMIT 1";
+            $re = mysqli_query($con, $getUserID);
+            $userID = mysqli_fetch_assoc($re);
+
+            $id = $userID['id'];
+            $createShoppingCart = "INSERT INTO warenkorb (benutzer_fs) VALUES ($id)";
+            mysqli_query($con, $createShoppingCart);
+
+            $_SESSION['id'] = $id;
             $_SESSION['surname'] = $surname;
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
             header('location: ..\index.php');
 
         } else {
+            $_SESSION['errors'] = $errors;
             header('location: ..\signup.php');
         }
     }
