@@ -11361,6 +11361,7 @@ textarea.form-control-lg {
   border-radius: 0.5rem;
   grid-gap: 12px;
   padding: 12px;
+  height: auto;
 }
 
 .panel > * {
@@ -11379,8 +11380,8 @@ textarea.form-control-lg {
 
 .gesamtbetrag {
   grid-area: gesamtBetrag;
-  max-height: 35vh;
   min-width: 20vh;
+  min-height: 35vh;
 }
 
 .gesamtbetrag > * {
@@ -11389,7 +11390,7 @@ textarea.form-control-lg {
 
 .lieferung {
   grid-area: lieferung;
-  height: 15vh;
+  height: auto;
 }
 
 .lieferung > * {
@@ -11398,7 +11399,7 @@ textarea.form-control-lg {
 
 .akzeptieren {
   grid-area: akzeptieren;
-  height: 15vh;
+  height: auto;
 }
 
 .akzeptieren > * {
